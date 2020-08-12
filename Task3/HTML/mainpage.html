@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID 19</title>
+    <link rel="stylesheet" href="../CSS/mainpage.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='../JAVASCRIPT/mainpage.js'></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {
+      'packages':['geochart'],
+      // Note: you will need to get a mapsApiKey for your project.
+      // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+      'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Covid Cases'],
+        ['United States', 5288811],
+        ['Brazil', 3068138],
+        ['India', 2328405],
+        ['Russia', 897599],
+        ['South Africa', 566109],
+        ['Mexico', 485836],
+        ['Peru', 483133],
+        ['Colombia', 397623],
+        ['Chile', 376616],
+        ['Spain', 373692],
+      ]);
+
+      var options = {};
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav id='navbar'>
+      <a class="navbar-brand" href="#about"></a>
+      <h2><a href="#">COVID-<span class="text-primary">19</span></a></h2>
+      <ul>
+        <li><a href="#navbar">Home</a></li>
+        <li><a href="#table">World Table</a></li>
+        <li><a href="#world-data">World Data</a></li>
+        <li><a href="#graph">Map</a></li>
+      </ul>
+    </nav>
+    <!-- end navbar -->
+    <!-- start header -->
+      <header class='shade' >
+        <div id='head'>
+          <h1>COVID-19</h1>
+          <h5>Statistic Report</h5>
+        </div>
+      </header>
+    <!-- end header -->
+    <!-- start table section -->
+    <section id='table' class='bg-light'>
+      <div class="container">
+        <div class="table-head">
+          <br><br><br><br>
+          <br><h1>LIST OF <span class='text-primary'>WORLDWIDE</span> COVID DATA</h1>
+          <p id='para1'></p>
+          <br>
+          <input type="text" id='country-input' onkeyup="searchFun()" placeholder='Search for a country...'>
+        </div>
+        <br><br>
+        <table class='mytable' id='my-table'>
+          <tr>
+            <th>Sr No.</th>
+            <th>Country</th>
+            <th>Cases</th>
+            <th>Death</th>
+            <th>Recovered</th>
+          </tr>
+        </table>
+        <script>
+        </script>
+      </div>
+    </section>
+    <br>
+    <!-- end table section -->
+    <!-- start world data -->
+    <section class='bg-medium'id='world-data'>
+      <div class="table-head">
+        <br><br><br><br>
+        <br><h1>OVERALL <span class='text-primary'>WORLD </span>DATA</h1>
+        <p id='para2'></p>
+        <br>
+      </div>
+      <div class="container">
+        <table class='mytable' border="3px solid black">
+          <tr>
+            <th>Total Cases</th>
+            <td id='1'></td>
+          </tr>
+          <tr>
+            <th>Total Deaths</th>
+            <td id='2'></td>
+          </tr>
+          <tr>
+            <th>Total Recovered</th>
+            <td id='3'></td>
+          </tr>
+        </table>
+      </div>
+      <br><br><br>
+    </section>
+    <!-- end world data -->
+    <!-- start graphs -->
+    <section class="bg-dark" id="graph">
+      <div class="">
+        <div class="container">
+          <div class="table-head">
+            <br><br><br><br>
+            <br><h1><span class='text-primary'>STATISTICAL </span>DATA</h1>
+            <br>
+          </div>
+          <div class="h-bar-graph">
+            <h1>Region GeoChart for<span class='text-primary'> First 10</span> Countries</h1>
+            <br><br>
+            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end graphs -->
+    <!-- footer start -->
+    <br>
+    <footer class="bg-dark">
+      <p><span class="text-primary">Name: </span>Aryan Parekh</p>
+      <p><span class="text-primary">Email-ID: </span>aryanparekh2412@gmail.com</p>
+      <p><span class="text-primary">Phone No.: </span>+91 7021298925</p>
+    </footer>
+    <!-- footer end  -->
+  </body>
+</html>

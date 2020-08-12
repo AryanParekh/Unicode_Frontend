@@ -1,0 +1,164 @@
+*{
+  margin:0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  color: #fff;
+  overflow-x: scroll;
+}
+/* utility */
+.container{
+  max-width: 1100px;
+  margin: auto;
+}
+.text-yellow{
+  color: #FFC300;
+}
+
+.text-primary{
+  color:#B80000;
+}
+
+.bg-light{
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-medium{
+  background: #D1D1D1;
+  color: #333;
+}
+.bg-dark{
+  background: #333;
+  color: #fff;
+}
+/* navbar */
+#navbar,#contact-navbar{
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  padding: 1.5rem 8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 3px solid #B80000;
+}
+#navbar .logo-image{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+#navbar ul,#contact-navbar ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar h2 a,#contact-navbar h2 a{
+  font-size: 3rem;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+}
+#navbar li a,#contact-navbar li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.35s;
+}
+#navbar li a:hover,#contact-navbar li a:hover{
+  background-color: #B80000;
+}
+/* header */
+#head{
+  background: url(../IMAGES/covid.jpg) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  height: 700px;
+  border: 4px solid black;
+}
+#head .shade{
+  background: rgba(0, 0, 0, 0.55);
+}
+#head h1{
+  font-size: 4rem;
+}
+#head h5{
+  font-size: 1.5rem;
+}
+/* table */
+.table-head{
+  text-align: center;
+}
+.table-head h1{
+  font-size: 2.6rem;
+}
+.table-head input{
+  align-self: center;
+  width: 30%;
+  font-size: 1.1rem;
+  padding: 0.7rem;
+  border: 0.5px solid #333;
+  border-radius: 10px;
+}
+table{
+  border-collapse: collapse;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  table-layout: fixed;
+}
+.mytable th,td{
+  text-align: left;
+  padding: 8px;
+}
+.mytable tr:nth-child(odd){background-color: #fff;}
+.mytable th {
+  height: 50px;
+  background-color: #B80000;
+  color: white;
+}
+/* graphs */
+.h-bar-graph{
+  width: 800px;
+  margin: 0;
+}
+.h-bar-graph h1{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+.h-bar-graph h2{
+  text-align: left;
+}
+#regions_div{
+  border: 2px solid black;
+}
+/* footer */
+footer{
+  padding: 1rem;
+  border-top: 3px solid #B80000;
+}
+footer p{
+  text-align:right;
+}
